@@ -17,13 +17,13 @@ class UserViewModel with ChangeNotifier implements AuthBase {
 
   @override
   Future<UserModel> login(String mail, String pass) async {
-    try {
-      _userModel = await authService.login(mail, pass);
-      return _userModel;
-    } catch (e) {
-      print("ViewModel signInWithMailAndPass() hatası: " + e.toString());
-      throw e;
-    }
+    // try {
+    _userModel = await authService.login(mail, pass);
+    return _userModel;
+    // } catch (e) {
+    //   print("ViewModel signInWithMailAndPass() hatası: " + e.toString());
+    //   throw e;
+    // }
   }
 
   @override

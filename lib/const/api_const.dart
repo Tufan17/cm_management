@@ -1,4 +1,4 @@
-String companyUrl = "https://quizapp.qulakexam.com";
+String companyUrl = "http://127.0.0.1:8000";
 String loginCookie = "";
 List<Map> coursesMap = [
   {
@@ -21,7 +21,6 @@ List<Map> coursesMap = [
     "name": "Tarih",
     "id": 5,
   },
-
   {
     "name": "Edebiyat",
     "id": 14,

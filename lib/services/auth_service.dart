@@ -11,7 +11,7 @@ class AuthService implements AuthBase {
   @override
   Future login(String email, String pass) async {
     final response = await http.post(
-      Uri.parse('$companyUrl/login'),
+      Uri.parse('$companyUrl/api/auth/login'),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -19,16 +19,16 @@ class AuthService implements AuthBase {
       body: jsonEncode({'email': email, 'password': pass}),
     );
 
-    loginCookie = response.headers["set-cookie"].split(";")[0].toString();
+    // loginCookie = response.headers["set-cookie"].split(";")[0].toString();
 
-    var userJson = jsonDecode(response.body)["user"];
-
-    UserModel userModelObject = UserModel.fromMap(userJson);
-    userModel.name = userModelObject.name;
-    userModel.last_name = userModelObject.last_name;
-    userModel.email = userModelObject.email;
-    userModel.id = userModelObject.id;
-    print(userModelObject.toString() + " *********");
+    var userJson = jsonDecode(response.body);
+    print(userJson.toString());
+    // UserModel userModelObject = UserModel.fromMap(userJson);
+    // userModel.name = userModelObject.name;
+    // userModel.last_name = userModelObject.last_name;
+    // userModel.email = userModelObject.email;
+    // userModel.id = userModelObject.id;
+    // print(userModelObject.toString() + " *********");
 
     if (response.statusCode == 200) {
       return userModel;

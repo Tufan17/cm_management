@@ -1,11 +1,15 @@
+import 'dart:convert';
+
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as d;
+import '../../../const/api_const.dart';
 import '../../../const/colors.dart';
 import '../../../services/auth_service.dart';
 import '../../../viewModel/user_view_model.dart';
 import '../mobile_scan_view.dart';
+import 'package:http/http.dart' as http;
 
 class MobileLogin extends StatefulWidget {
   @override
@@ -187,21 +191,23 @@ class _MobileLoginState extends State<MobileLogin> {
                   // ignore: deprecated_member_use
                   child: GestureDetector(
                     onTap: () {
-                      if (isClicked == false) {
-                        login("deneme@gmail.com", "123456Kc").then((value) {
-                          if (value != null) {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Scan()));
-                          } else {
-                            d.log(value.toString());
-                          }
-                        });
-                      } else {}
-
-                      isClicked = true;
-                      setState(() {});
+                      login("tufanmemisali17@gmail.com", "Tufan.017");
+                      // if (isClicked == false) {
+                      //   login("tufanmemisali@gmail.com", "Tufan.017")
+                      //       .then((value) {
+                      //     if (value != null) {
+                      //       Navigator.push(
+                      //           context,
+                      //           MaterialPageRoute(
+                      //               builder: (context) => Scan()));
+                      //     } else {
+                      //       d.log(value.toString());
+                      //     }
+                      //   });
+                      // } else {}
+                      //
+                      // isClicked = true;
+                      // setState(() {});
                     },
                     // elevation: 8,
                     // shape: RoundedRectangleBorder(
@@ -246,7 +252,18 @@ class _MobileLoginState extends State<MobileLogin> {
   }
 
   Future login(String mail, String password) async {
-    var user = await userViewModel.login(mail, password);
-    return user;
+    dynamic response = await http.post(
+      Uri.parse('http://172.20.10.2:81/api/auth/login'),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: jsonEncode({'email': mail, 'password': password}),
+    );
+
+    // loginCookie = response.headers["set-cookie"].split(";")[0].toString();
+
+    dynamic userJson = jsonDecode(response.body);
+    print(userJson.toString());
   }
 }
