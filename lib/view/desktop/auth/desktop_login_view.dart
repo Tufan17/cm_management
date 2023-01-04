@@ -35,29 +35,6 @@ class _DesktopLoginState extends State<DesktopLogin> {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Row(
-              children: [
-                Text(
-                  "qr",
-                  style: TextStyle(
-                      color: mainColor,
-                      fontSize: size.width * 0.02,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Exam",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: size.width * 0.02,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        ],
         leading: SizedBox(
           height: size.width * 0.02,
           width: size.width * 0.02,
@@ -87,28 +64,14 @@ class _DesktopLoginState extends State<DesktopLogin> {
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SvgPicture.asset(
-                      "assets/login.svg",
-                      height: size.width * 0.14,
-                      width: size.width * 0.14,
-                    ),
-                    SizedBox(
-                      height: size.width * 0.02,
-                    ),
                     Container(
                       width: size.width * 0.27,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
-                            "qrExam",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontSize: size.width * 0.03,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "Karekodlu sınıf sınav uygulaması",
+                          Image.asset("assets/C__1_-removebg-preview.png"),
+                          const Text(
+                            "Karekodlu sınıf yönetimi uygulaması",
                             style: TextStyle(
                               color: Colors.black45,
                             ),
@@ -182,7 +145,7 @@ class _DesktopLoginState extends State<DesktopLogin> {
                       child: GestureDetector(
                         onTap: () {
                           if (isClicked == false) {
-                            login("ogrenci1@qulak.com", "123456Kc")
+                            login("tufanmemisali17@gmail.com", "Tufan.017")
                                 .then((value) {
                               if (value != null) {
                                 Navigator.push(

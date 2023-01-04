@@ -23,12 +23,12 @@ class AuthService implements AuthBase {
 
     var userJson = jsonDecode(response.body);
     print(userJson.toString());
-    // UserModel userModelObject = UserModel.fromMap(userJson);
-    // userModel.name = userModelObject.name;
-    // userModel.last_name = userModelObject.last_name;
-    // userModel.email = userModelObject.email;
-    // userModel.id = userModelObject.id;
-    // print(userModelObject.toString() + " *********");
+    UserModel userModelObject = UserModel.fromMap(userJson["user"]);
+    userModel.name = userModelObject.name;
+    userModel.last_name = userModelObject.last_name;
+    userModel.email = userModelObject.email;
+    userModel.id = userModelObject.id;
+    print(userModelObject.toString() + " *********");
 
     if (response.statusCode == 200) {
       return userModel;

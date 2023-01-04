@@ -1,4 +1,4 @@
-String companyUrl = "http://127.0.0.1:8000";
+String companyUrl = "http://10.80.26.136:81";
 String loginCookie = "";
 List<Map> coursesMap = [
   {

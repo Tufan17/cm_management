@@ -45,11 +45,7 @@ class _DesktopRegisterState extends State<DesktopRegister> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Image.asset(
-                "assets/register.png",
-                height: 180,
-                width: 180,
-              ),
+              Image.asset("assets/C__1_-removebg-preview.png"),
               SizedBox(
                 height: 10,
               ),
