@@ -16,13 +16,13 @@ class DBService implements DBBase {
 
   @override
   Future getCourseSubject(int id) async {
-    try{
-    final response = await http.get(
-      Uri.parse(companyUrl + '/admin/quizapp/course_subject/$id'),
-      headers: {'Accept': 'application/json', 'Cookie': loginCookie},
-    );
-    return List<Map>.from(json.decode(response.body));
-    }catch(e){
+    try {
+      final response = await http.get(
+        Uri.parse(companyUrl + '/admin/quizapp/course_subject/$id'),
+        headers: {'Accept': 'application/json', 'Cookie': loginCookie},
+      );
+      return List<Map>.from(json.decode(response.body));
+    } catch (e) {
       return e;
     }
   }
@@ -34,9 +34,19 @@ class DBService implements DBBase {
       Uri.parse(companyUrl + '/admin/create_quiz_app_test/test_api/$id'),
       headers: {'Accept': 'application/json', 'Cookie': loginCookie},
     );
-    var question=json.decode(response.body);
+    var question = json.decode(response.body);
 
     return question[0];
   }
 
+  @override
+  Future getExams() async {
+    final response = await http.get(
+      Uri.parse(companyUrl + '/api/exam'),
+      headers: {'Accept': 'application/json', 'Cookie': loginCookie},
+    );
+    var question = json.decode(response.body);
+
+    return question;
+  }
 }

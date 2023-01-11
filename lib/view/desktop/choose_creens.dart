@@ -1,3 +1,4 @@
+import 'package:cm_flutter/view/desktop/attendance.dart';
 import 'package:cm_flutter/view/desktop/exam.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -128,27 +129,33 @@ class _ChooseScreensState extends State<ChooseScreens> {
                   ),
                 ),
               ),
-              Container(
-                height: 400,
-                width: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey.shade300,
-                ),
-                child: Column(
-                  children: [
-                    Expanded(child: Image.asset("assets/register.png")),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Yoklama",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: size.width * 0.015,
-                            fontWeight: FontWeight.w600),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Attendance()));
+                },
+                child: Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.shade300,
+                  ),
+                  child: Column(
+                    children: [
+                      Expanded(child: Image.asset("assets/register.png")),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Yoklama",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: size.width * 0.015,
+                              fontWeight: FontWeight.w600),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],

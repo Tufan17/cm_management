@@ -1,22 +1,25 @@
-import 'package:cm_flutter/const/colors.dart';
-import 'package:flutter/cupertino.dart';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 
+import '../../const/api_const.dart';
+import '../../const/colors.dart';
 import '../../services/db_services.dart';
 import '../../viewModel/user_view_model.dart';
-import 'desktop_courses_view.dart';
+import 'package:http/http.dart' as http;
+
+import 'attendance_lesson.dart';
 import 'desktop_timer_view.dart';
 
-class ExamsScreen extends StatefulWidget {
-  const ExamsScreen({Key key}) : super(key: key);
+class Attendance extends StatefulWidget {
+  const Attendance({Key key}) : super(key: key);
 
   @override
-  State<ExamsScreen> createState() => _ExamsScreenState();
+  State<Attendance> createState() => _AttendanceState();
 }
 
-class _ExamsScreenState extends State<ExamsScreen> {
+class _AttendanceState extends State<Attendance> {
   DBService dbService = DBService();
   UserViewModel userViewModel;
   List exam = [];
@@ -35,13 +38,12 @@ class _ExamsScreenState extends State<ExamsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    userViewModel = Provider.of<UserViewModel>(context, listen: false);
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          "Sınavlar",
+          "Yoklama",
           style: TextStyle(
               color: Colors.black45,
               fontSize: size.width * 0.02,
@@ -80,8 +82,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                       context,
                       PageTransition(
                         type: PageTransitionType.rightToLeft,
-                        child: TimerView(exam[index]["name"], exam[index]["id"],
-                            userViewModel.userModel.id),
+                        child: AttendanceLesson(name: exam[index]["name"]),
                       ),
                     );
                   },
@@ -96,7 +97,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                       ),
                       child: Column(
                         children: [
-                          Expanded(child: Image.asset("assets/exam.png")),
+                          Expanded(child: Image.asset("assets/login.png")),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -116,7 +117,13 @@ class _ExamsScreenState extends State<ExamsScreen> {
     );
   }
 
-  getExams() async {
-    return await DBService().getExams();
+  Future getExams() async {
+    final response = await http.get(
+      Uri.parse(companyUrl + '/api/lessons'),
+      headers: {'Accept': 'application/json', 'Cookie': loginCookie},
+    );
+    var question = json.decode(response.body);
+
+    return question;
   }
 }

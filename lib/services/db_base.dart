@@ -4,4 +4,7 @@ abstract class DBBase {
   Future<dynamic> getCourseSubject(int id); //Derslerin konuları
 
   Future<dynamic> getCourseSubjectQuestion(int id); //Konularının tüm sorunları
+
+  Future<dynamic> getExams(); //sınavlar
+
 }
