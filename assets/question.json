@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Matematik",
+    "id": 1,
+    "question": [
+      {
+        "id": "1",
+        "time": "20",
+        "point": 5,
+        "title": "Bir metro istasyonuna A yönünden 6 dakikada bir, B yönünden ise 8 dakikada bir metro gelmektedir. Metrolar saat 8.40’ta\naynı anda bu istasyona gelmişlerdir. Beren bu istasyona geldiğinde A ve B yönünden gelecek metroların istasyona\nulaşmalarına 5’er dakika kaldığını görüyor.",
+        "answer_options": [
+          {
+            "value": "15.35",
+            "marks": false
+          },
+          {
+            "value": "16.45",
+            "marks": false
+          },
+          {
+            "value": "18.35",
+            "marks": true
+          },
+          {
+            "value": "19.45",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "time": "20",
+        "point": 5,
+        "title": "Bayanlar gülle atma branşında Rio Olimpiyatları’na katılma barajı 17,8 m’dir. Yani bir yarışmacının bu olimpiyata\nkatılması için yaptığı atışın en az 17,8 m olması gerekir.\nMilli sporcumuz Emel Dereli Rio Olimpiyatları’nda ülkemizi temsil ettiğine göre yaptığı atış aşağıdakilerden\nhangisi olabilir?",
+        "answer_options": [
+          {
+            "value": "√¯260m",
+            "marks": false
+          },
+          {
+            "value": "√¯280m",
+            "marks": false
+          },
+          {
+            "value": "√¯300m",
+            "marks": false
+          },
+          {
+            "value": "√¯325m",
+            "marks": true
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "time": "20",
+        "point": 5,
+        "title": "Yusuf mart ayına ait yaprakları tek tek koparıp rastgele yere diziyor ve içlerinden bir yaprak seçiyor. Rastgele\nseçtiği takvim yaprağının salı gününe gelen asal sayı olma olasılığı aşağıdakilerden hangisidir?\n(Mart ayı 31 gündür)",
+        "answer_options": [
+          {
+            "value": "1/31",
+            "marks": false
+          },
+          {
+            "value": "2/31",
+            "marks": false
+          },
+          {
+            "value": "3/31",
+            "marks": true
+          },
+          {
+            "value": "4/31",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "time": "20",
+        "point": 5,
+        "title": "Bir internet sitesi, kullanıcılarından 1’den 10’a kadar bir sayı seçmelerini istemiştir. Kullanıcıların cevapları incelendiğinde; her bir sayıyı seçen kullanıcı sayısının, seçilen sayının çarpan sayısı kadar olduğu görülmüştür.\nÖrneğin\n8’i seçen kullanıcı sayısı, 8’in 4 tane çarpanı olduğundan dolayı 4’tür.\nBuna göre kullanıcılardan biri seçildiğinde, bu kişinin 4’ü seçmiş olma olasılığı kaçtır?",
+        "answer_options": [
+          {
+            "value": "1/10",
+            "marks": false
+          },
+          {
+            "value": "1/9",
+            "marks": true
+          },
+          {
+            "value": "4/27",
+            "marks": false
+          },
+          {
+            "value": "4/10",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "time": "20",
+        "point": 5,
+        "title": "Bir karınca kendisinin 50 katı kütlesini taşıyabilmektedir. Buradan esinlenerek kendi kütlesinin 50 katını taşıyabilen bir\nrobot tasarlanmıştır.\nKütlesi √¯12 kg olan bu robot kütlesi √¯27 kg kutulardan en fazla kaç tane taşıyabilir?",
+        "answer_options": [
+          {
+            "value": "35",
+            "marks": false
+          },
+          {
+            "value": "34",
+            "marks": false
+          },
+          {
+            "value": "33",
+            "marks": true
+          },
+          {
+            "value": "32",
+            "marks": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Türkçe",
+    "id": 2,
+    "question": [
+      {
+        "id": "1",
+        "time": "20",
+        "point": 5,
+        "title": "Aşağıda verilen deyimlerden hangisinin açıklaması yanlıştır?",
+        "answer_options": [
+          {
+            "value": "Kuş uçurmamak → Hiçbir şeyin veya kimsenin kaçmasına, geçmesine imkân vermemek.",
+            "marks": false
+          },
+          {
+            "value": "Kuyruğuna basmak → Birini incitip saldırıda bulunmasına yol açmak.",
+            "marks": false
+          },
+          {
+            "value": "Ayağı yerden kesilmek → Aşırı korkudan dolayı fazlasıyla heyecanlanmak.",
+            "marks": true
+          },
+          {
+            "value": " Kaşla göz arasında → Kimsenin sezmesine imkân vermeyecek kadar kısa bir zaman içinde.",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "time": "20",
+        "point": 5,
+        "title": "“Kapmak” sözcüğü hangi cümlede “ısırıp parçalamak” anlamında kullanılmıştır?",
+        "answer_options": [
+          {
+            "value": "Elimdeki kalemi birdenbire kapmasın mı? ",
+            "marks": false
+          },
+          {
+            "value": "Sürüden ayrılanı kurt kapar.",
+            "marks": true
+          },
+          {
+            "value": "Dinlediği bir türküyü anında kapar",
+            "marks": false
+          },
+          {
+            "value": "Arka sıralardan bir sandalye kaptık",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "time": "20",
+        "point": 5,
+        "title": "İlim olmadan gelişim olamaz. İlim öğrenmeye çalış ve bilgililerin bilgilisi ol. Bunun için “Beşikten mezara kadar ilim\nöğreniniz!” sözünü ilke edin.\nBu paragrafta aşağıdaki düşünceyi geliştirme yollarından hangisine başvurulmuştur? ",
+        "answer_options": [
+          {
+            "value": "Tanık gösterme",
+            "marks": true
+          },
+          {
+            "value": "Örnekleme",
+            "marks": false
+          },
+          {
+            "value": "Tanımlama",
+            "marks": false
+          },
+          {
+            "value": "Sayısal verilerden yararlanma",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "time": "20",
+        "point": 5,
+        "title": "Şuna ise hiç karar veremiyorum. Bir parçalanma mı hayat (I) yoksa bütünleşme mi (II) Hayat dediğimiz çaba (III) iki ayrı\nparçayı sonuna dek iki ayrı parça hâlinde tutmaya çalışmak mı (IV) yoksa onları bütünlüğe kavuşturmak mı (V)\nBu metinde numaralanmış yerlerden hangilerine soru işareti getirilmelidir?",
+        "answer_options": [
+          {
+            "value": "I ve II.",
+            "marks": false
+          },
+          {
+            "value": "II ve III.",
+            "marks": false
+          },
+          {
+            "value": "II ve V.",
+            "marks": true
+          },
+          {
+            "value": "IV ve V",
+            "marks": false
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "time": "20",
+        "point": 270,
+        "title": "KCTEK Firmasında şu ana kadar yapılan en iyi staj sunumu kime aittir?",
+        "answer_options": [
+          {
+            "value": "Batuhan Yılmaz",
+            "marks": true
+          },
+          {
+            "value": "Batuhan Yılmaz",
+            "marks": true
+          },
+          {
+            "value": "Batuhan Yılmaz",
+            "marks": true
+          },
+          {
+            "value": "Bilemedim",
+            "marks": false
+          }
+        ]
+      }
+    ]
+  }
+]

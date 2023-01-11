@@ -6,6 +6,7 @@ import 'dart:developer' as d;
 import '../../../const/colors.dart';
 import '../../../services/auth_service.dart';
 import '../../../viewModel/user_view_model.dart';
+import '../choose_creens.dart';
 import '../desktop_courses_view.dart';
 import 'desktop_register_view.dart';
 
@@ -151,8 +152,7 @@ class _DesktopLoginState extends State<DesktopLogin> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>
-                                            DesktopCourses()));
+                                        builder: (context) => ChooseScreens()));
                               } else {
                                 d.log(value.toString());
                               }

@@ -22,26 +22,9 @@ class _DesktopHomeState extends State<DesktopHome> {
       body: Stack(
         children: [
           Positioned(
-            top: 20,
+            top: 0,
             left: 20,
-            child: Row(
-              children: [
-                Text(
-                  "qr",
-                  style: TextStyle(
-                      color: mainColor,
-                      fontSize: size.width * 0.02,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "Exam",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: size.width * 0.02,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
+            child: Image.asset("assets/C__1_-removebg-preview.png"),
           ),
           Positioned(
               right: 20,
@@ -130,7 +113,7 @@ class _DesktopHomeState extends State<DesktopHome> {
             ),
           ),
           Positioned(
-            top: 120,
+            top: 320,
             left: 30,
             child: Container(
               width: size.width * 0.3,
@@ -148,7 +131,7 @@ class _DesktopHomeState extends State<DesktopHome> {
                     height: size.width * 0.02,
                   ),
                   Text(
-                    "Onlarca ders, yüzlerce soru ile sınıf arkadaşlarınla eğlenerek seviyeni belirlemeye hazır mısın? qrExam senin için rekabetçi bir ortam oluşturarak eğlenerek öğrenmeni sağlar. Hadi! Hemen başlayalım.",
+                    "Onlarca ders, yüzlerce soru ile sınıf arkadaşlarınla eğlenerek seviyeni belirlemeye hazır mısın? Classroom Management senin için rekabetçi bir ortam oluşturarak eğlenerek öğrenmeni sağlar. Hadi! Hemen başlayalım.",
                     style: TextStyle(
                         color: Colors.black45,
                         fontSize: size.width * 0.012,
